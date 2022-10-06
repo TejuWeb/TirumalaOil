@@ -26,3 +26,23 @@ main {
   background-color: #eeeeff;
   background-clip: content-box;
 }
+.tbl-fixed{
+  overflow-x: scroll;
+  overflow-y: scroll;
+  height: fit-content;
+  max-height: 40vh;
+
+}
+table{
+  min-width: max-content;
+ border: 1px solid black;
+ border-radius: 5px;
+ text-align: center;
+}
+thead{
+  position: sticky;
+ top: 0; /* Don't forget this, required for the stickiness */
+  text-align: center;
+  font-size: 16px;
+ 
+}
