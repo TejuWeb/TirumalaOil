@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TirumalaOil", "TirumalaOil\TirumalaOil.csproj", "{22C70A0B-4143-4BAD-B288-45EE61FB53F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22C70A0B-4143-4BAD-B288-45EE61FB53F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22C70A0B-4143-4BAD-B288-45EE61FB53F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22C70A0B-4143-4BAD-B288-45EE61FB53F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22C70A0B-4143-4BAD-B288-45EE61FB53F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C950A65-F347-4334-9D4D-A72DDD8AFE7B}
+	EndGlobalSection
+EndGlobal
