@@ -1,0 +1,186 @@
+<div class="container-fluid pb-2 flex-grow-1 d-flex flex-column flex-sm-row overflow-auto">
+  <div class="row flex-grow-sm-1 flex-grow-0">
+    <aside class=" sticky-top pb-sm-0 pb-3" style="width: 250px;">
+      <div class="bg-light border rounded-3 p-1 h-100 sticky-top">
+        <ul class="nav nav-pills flex-sm-column flex-row mb-auto justify-content-between text-truncate">
+          <li class="nav-item">
+            <a  routerLinkActive="active" routerLink="/home" class="nav-link px-2 text-truncate">
+              <i class="fa-solid fa-wrench"></i>&nbsp;
+              <span class="d-none d-sm-inline"> Product Master</span>
+            </a>
+          </li>
+          <li>
+            <a  routerLinkActive="active" routerLink="/pricelist" class="nav-link px-2 text-truncate">
+              <i class="fa-solid fa-indian-rupee-sign"></i>&nbsp;&nbsp;
+              <span class="d-none d-sm-inline"> Product Price List</span>
+            </a>
+          </li>
+          <li>
+            <a  routerLinkActive="active" routerLink="/salesquantity" class="nav-link px-2 text-truncate"><i
+                class="fa-solid fa-cart-shopping"></i>&nbsp;
+              <span class="d-none d-sm-inline">Sales Quantity</span> </a>
+          </li>
+          <li>
+            <a  routerLinkActive="active" routerLink="/salesvalue" class="nav-link px-2 text-truncate"><i
+                class="fa-solid fa-money-bill-trend-up"></i>&nbsp;
+              <span class="d-none d-sm-inline"> Sales Value</span> </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="col overflow-auto h-100">
+      <div class="bg-light border rounded-3 p-4">
+        <div
+          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2">Product Master - Price List & Sales</h1>
+        </div>
+
+        <div class="card ">
+          <div class="card-body p-4">
+            <div>
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Add New Product
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade grid" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Add New Product</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body ">
+                      <div class="card">
+                        <div class="card-body">
+                          <form class="row">
+                            <div class="col-md-6">
+                              <label for="formGroupLable-1" class="form-label">Product Name</label>
+                              <input type="text" class="form-control" id="formGroupLabel-1">
+                            </div>
+                            <div class="col-md-6">
+                              <label for="formGroupLable-2" class="form-label">Product Category</label>
+                              <input type="text" class="form-control" id="formGroupLabel-2">
+                            </div>
+                            <div class="col-md-6">
+                              <label for="formGroupLable-3" class="form-label">Sales Type</label>
+                              <input type="text" class="form-control" id="formGroupLabel-3">
+                            </div>
+                            <div class="col-md-6">
+                              <label for="formGroupLable-4" class="form-label">Pack Type</label>
+                              <input type="text" class="form-control" id="formGroupLabel-4">
+                            </div>
+                            <div class="col-md-6">
+                              <label for="formGroupLable-5" class="form-label">Pack Size</label>
+                              <input type="text" class="form-control" id="formGroupLabel-5">
+                            </div>
+                            <div class="col-md-6">
+                              <label for="formGroupLable-6" class="form-label">MRP/Case</label>
+                              <input type="text" class="form-control" id="formGroupLabel-6">
+                            </div>
+                            <div class="col-md-6">
+                              <label for="formGroupLable-7" class="form-label">Unit</label>
+                              <input type="text" class="form-control" id="formGroupLabel-7">
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Add</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Dynamic Table-->
+            <!-- <table class="table table-bordered ">
+            <div class="grid-table tbl-fixed ">
+              <div class="thead">
+                <div class="tr">
+                  <div class="td">Product Name</div>
+                  <div class="td">Product Category</div>
+                  <div class="td">Sales Type</div>
+                  <div class="td">Pack Type</div>
+                  <div class="td">Pack Size</div>
+                  <div class="td">MRP/Case</div>
+                  <div class="td">Unit</div>
+                  <div class="td">Actions</div>
+                </div>
+              </div>
+              <div class="tbody">
+               
+                <form class="tr" [formGroup]="productForm" *ngFor="let fg of productForms.controls" (ngSubmit)="onSubmit()"> 
+                  <div class="td">
+                    <input class="form-control" formControlName="productName">
+                  </div>
+                  <div class="td"  >
+                    <input class="form-control" formControlName="productCategory">
+                  </div>
+                  <div class="td"  >
+                    <input class="form-control" formControlName="productSaleType">
+                  </div>
+                  <div class="td"  >
+                    <input class="form-control" formControlName="productPackType">
+                  </div>
+                  <div class="td"  >
+                    <input class="form-control" formControlName="productPackSize">
+                  </div>
+                  <div class="td"  >
+                    <input class="form-control" formControlName="productMRPperCase">
+                  </div>
+                  <div class="td"  >
+                    <input class="form-control" formControlName="productUnit">
+                  </div>
+                  <div class="td " style="display:flex ;">
+                    <button type="submit" class="btn btn-success m-1" > <i class="fa fa-save"></i></button>
+                    <button type="button" class="btn btn-danger m-1"><i class="fa fa-trash"></i></button>
+                    
+                  </div>
+                </form>
+              </div>
+            </div>
+          </table> -->
+
+            <!--Table-->
+            <div class="p-2">
+              <div class="tbl-fixed">
+                <table class="table table-bordered ">
+                  <thead class="bg-info ">
+                    <tr>
+                      <th >Product Id</th>
+                      <th >Product Name</th>
+                      <th >Product Category</th>
+                      <th >Sales Type</th>
+                      <th >Pack Type</th>
+                      <th >Pack Size</th>
+                      <th >MRP/Case</th>
+                      <th >Unit</th>
+                      <th >Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                    
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
