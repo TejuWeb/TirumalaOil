@@ -7,11 +7,7 @@
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
   }
   
-  main {
-    min-height: 90vh;
-    width: 90vw;
-  }
-  
+
   
   .row [class*='col'] {
     background-color: #efefef;
@@ -38,8 +34,7 @@
   .tbl-fixed{
     overflow-x:scroll;
     overflow-y:scroll;
-    height: fit-content;
-    max-height: 40vh;
+    height:50vh;
   }
   table{
     min-width: max-content;

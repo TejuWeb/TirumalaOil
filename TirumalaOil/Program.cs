@@ -1,6 +1,7 @@
 
 using Microsoft.CodeAnalysis.Options;
 using Microsoft.EntityFrameworkCore;
+using TirumalaOil.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,14 +12,13 @@ builder.Services.AddCors(options =>
         builder => builder.WithOrigins("https://localhost:44444"));
 });
 
+
+
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
-//builder.Services.AddDbContext<APIDBContext>(options =>
-//{
- //   options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection"));
 
-//});
+builder.Services.AddDbContext<TirumalaDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Connection")));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

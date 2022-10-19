@@ -1,16 +1,16 @@
 * {
   border-radius: 5px;
+
 }
 
 body.thumb {
   transform: scale(0.4);
-  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
 }
 
-main {
-  min-height: 90vh;
-  width: 90vw;
-}
+
+
+
 
 /* [class*='container'] {
   border: 1px dashed #eee;
@@ -26,28 +26,31 @@ main {
   background-color: #eeeeff;
   background-clip: content-box;
 }
-.tbl-fixed{
+
+.tbl-fixed {
   overflow-x: scroll;
   overflow-y: scroll;
-  height:60vh;
+  height: 60vh;
 }
-table{
- 
- border: 1px solid black;
- border-radius: 5px;
- text-align: center;
+
+table {
+
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
 }
-thead{
+
+thead {
   position: sticky;
- top: 0;/* Don't forget this, required for the stickiness */
-   text-align: center;
+  top: 0;
+  /* Don't forget this, required for the stickiness */
+  text-align: center;
   font-size: 16px;
- 
+
 }
+
 .button.button-small {
   height: 30px;
   line-height: 30px;
   padding: 0px 10px;
 }
-
-

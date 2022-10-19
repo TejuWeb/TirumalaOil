@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { ProductService } from '../../shared/product.service';
+import { Product } from 'src/app/models/product.model';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +11,7 @@ import { ProductService } from '../../shared/product.service';
 export class HomeComponent implements OnInit {
 
 
+products: Product[] = [];
 
 
 productForms : FormArray = this.fb.array([]);
@@ -17,7 +19,7 @@ productList = [];
   productForm!: FormGroup;
 
 
-  constructor(private fb: FormBuilder,private service: ProductService){ 
+  constructor(private fb: FormBuilder,private productservice: ProductService){ 
    
    }
   
@@ -36,29 +38,12 @@ productList = [];
 
  
 
-this.service.GetProduct()
-.subscribe(res => this.productList = res as []);
-
-    this.addProductForm();
-
+this.productservice.getAllProducts()
+.subscribe((res) => this.products = res as []);
   }
 
-  onSubmit(){
-console.log(this.productForm.value);
-  }
-  
-addProductForm(){
-  this.productForms.push(this.fb.group({
-    productID : [0],
-    productName : [''],
-    productCatogory : [''],
-    productSaleType : [''],
-  productPackType : [''],
-  productPackSize : [''],
-    productMRPperCase : [''],
-    productUnit : [''],
-  }))
 }
 
 
-}
+
+
